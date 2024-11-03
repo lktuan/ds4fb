@@ -3,6 +3,8 @@
 Repo for holding my code along with the book: Data Science in Finance & Banking
 Code của tôi theo cuốn sách "Khoa học dữ liệu trong lĩnh vực Tài chính - Ngân hàng"
 
+![Ảnh bìa sách, nguồn Tiki](book_cover.png "Book cover")
+
 ## Yêu cầu hệ thống
 
 - Python >= 3.8
@@ -52,19 +54,9 @@ python -m ipykernel install --user --name=ds4fb
 
 6. Tạo data
 
+credit dataset
 ```bash
 python .\data\generator\credit_data_gen.py
-```
-
-## Cấu trúc Project
-
-```
-ds4fb/
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── generated/
-└── notebooks/
 ```
 
 ## Development

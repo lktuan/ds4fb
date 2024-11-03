@@ -1,7 +1,6 @@
 # **ds4fb**
 
-Repo for holding my code along with the book: Data Science in Finance & Banking
-Code của tôi theo cuốn sách "Khoa học dữ liệu trong lĩnh vực Tài chính - Ngân hàng"
+Code của tôi theo cuốn sách "Khoa học dữ liệu trong lĩnh vực Tài chính - Ngân hàng". Nếu bạn muốn thực hành và kiểm chứng, hãy làm theo hưỡng dẫn bên dưới.
 
 ![Ảnh bìa sách, nguồn Tiki](book_cover.png "Book cover")
 

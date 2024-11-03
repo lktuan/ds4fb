@@ -8,7 +8,7 @@ Code của tôi theo cuốn sách "Khoa học dữ liệu trong lĩnh vực Tài
 - Python >= 3.8
 - Git
 
-## Cài đặt
+## Cài đặt và sử dụng
 
 1. Clone repository:
 
@@ -30,21 +30,30 @@ source .venv/bin/activate
 3. Cài đặt project và dependencies:
 
 ```bash
-# Cài đặt các dependencies cơ bản
-pip install -e .
+# Cài đặt các dependencies
+pip install -r requirements.txt
 
-# Hoặc cài đặt full dependencies (bao gồm dev tools)
-pip install -e ".[dev]"
-
-# Cài đặt Jupyter Notebook extensions để format code trực tiếp trong notebook
-pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
+# # Cài đặt Jupyter Notebook extensions để format code trực tiếp trong notebook
+# pip install jupyter_contrib_nbextensions
+# jupyter contrib nbextension install --user
 ```
 
 4. Thiết lập pre-commit hooks:
 
 ```bash
 pre-commit install
+```
+
+5. Đăng ký Kernel của `.venv` cho Jupyter nếu chưa có
+
+```bash
+python -m ipykernel install --user --name=ds4fb
+```
+
+6. Tạo data
+
+```bash
+python .\data\generator\credit_data_gen.py
 ```
 
 ## Cấu trúc Project
@@ -56,41 +65,6 @@ ds4fb/
 │   ├── processed/
 │   └── generated/
 └── notebooks/
-```
-
-## Sử dụng
-
-1. Kích hoạt môi trường ảo:
-
-```bash
-# Windows:
-.venv\Scripts\activate
-# Linux/Mac:
-source .venv/bin/activate
-```
-
-2. Khởi chạy code editor:
-
-```bash
-jupyter notebook
-```
-
-hoặc VS Code
-
-```bash
-code .
-```
-
-3. Đăng ký Kernel của `.venv` cho Jupyter
-
-```bash
-python -m ipykernel install --user --name=ds4fb
-```
-
-4. Tạo data
-
-```bash
-python .\data\generator\credit_data_gen.py
 ```
 
 ## Development

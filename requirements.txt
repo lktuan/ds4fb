@@ -1,0 +1,22 @@
+# Core data science libraries
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+scipy>=1.12.0
+statsmodels>=0.14.1
+torch>=2.2.0
+tensorflow>=2.15.0
+
+# Jupyter environment
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Development tools
+black>=24.1.1
+isort>=5.13.2
+flake8>=7.0.0
+pre-commit>=3.6.0
+
+# Notebook formatting tools
+nbqa>=1.7.1
+black[jupyter]>=24.1.1  # Hỗ trợ format notebooks

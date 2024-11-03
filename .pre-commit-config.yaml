@@ -1,0 +1,44 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-yaml
+    - id: check-json
+    - id: check-added-large-files
+    - id: debug-statements
+
+- repo: https://github.com/psf/black
+  rev: 24.1.1
+  hooks:
+    - id: black
+      language_version: python3
+    - id: black-jupyter  # Thêm black cho Jupyter notebooks
+      language_version: python3
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.13.2
+  hooks:
+    - id: isort
+      args: ["--profile", "black"]
+
+- repo: https://github.com/pycqa/flake8
+  rev: 7.0.0
+  hooks:
+    - id: flake8
+      args: ["--max-line-length=88"]
+      additional_dependencies: [
+        'flake8-docstrings',
+        'nbqa'  # Thêm nbqa để chạy flake8 trên notebooks
+      ]
+
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.7.1
+  hooks:
+    - id: nbqa-black  # Chạy black trên notebooks
+      additional_dependencies: [black==24.1.1]
+    - id: nbqa-isort  # Chạy isort trên notebooks
+      additional_dependencies: [isort==5.13.2]
+    - id: nbqa-flake8  # Chạy flake8 trên notebooks
+      additional_dependencies: [flake8==7.0.0]
